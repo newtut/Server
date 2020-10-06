@@ -5,7 +5,7 @@ include 'includes.php';
 
     if(isset($_POST['submit']))
     {
-        $con = mysqli_connect('bqbxbuerhzolifexxeim-mysql.services.clever-cloud.com', 'ur31kfvnrvrocgdy', 'fdZgRxAydtLaR9c3HhLe', 'bqbxbuerhzolifexxeim');
+        $con = mysqli_connect('bxh4dwfceuoiprsc0heb-mysql.services.clever-cloud.com', 'u1exqv0w4ilg7eep', 'hxQbTSldOIX8Kq9VPsJw', 'bxh4dwfceuoiprsc0heb');
         $u = $con->real_escape_string($_POST['u']);
         $p = $con->real_escape_string($_POST['p']);
         $usernameclean = filter_var($u, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
@@ -42,7 +42,7 @@ include 'includes.php';
         {
             echo "<p align='center' id='CODE' style='color:red;'>6: Incorrect password</p>"; // error code #6 - password does not hash to match table
             $log = "User entered incorrect password ($p)";
-            logger($log);
+            #logger($log);
             exit();
         }
         else{

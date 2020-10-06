@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
 
         //Connect to the database
 
-        $con = mysqli_connect('bqbxbuerhzolifexxeim-mysql.services.clever-cloud.com', 'ur31kfvnrvrocgdy', 'fdZgRxAydtLaR9c3HhLe', 'bqbxbuerhzolifexxeim');
+        $con = mysqli_connect('bxh4dwfceuoiprsc0heb-mysql.services.clever-cloud.com', 'u1exqv0w4ilg7eep', 'hxQbTSldOIX8Kq9VPsJw', 'bxh4dwfceuoiprsc0heb');
         if(mysqli_connect_errno())
         {
             echo "<p style='color:red;'>1: Connection failed</p>"; //error code #1 = connection failed
