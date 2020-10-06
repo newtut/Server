@@ -3,7 +3,7 @@ if(isset($_GET['vkey'])){
     //Process Verification
     $vkey = $_GET['vkey'];
 
-    $con = mysqli_connect('bqbxbuerhzolifexxeim-mysql.services.clever-cloud.com', 'ur31kfvnrvrocgdy', 'fdZgRxAydtLaR9c3HhLe', 'bqbxbuerhzolifexxeim');
+    $con = mysqli_connect('bxh4dwfceuoiprsc0heb-mysql.services.clever-cloud.com', 'u1exqv0w4ilg7eep', 'hxQbTSldOIX8Kq9VPsJw', 'bxh4dwfceuoiprsc0heb');
 
     $resultSet = $con->query("SELECT verified, vkey FROM players WHERE verified = 0 AND vkey = '$vkey' LIMIT 1");
 
