@@ -4,7 +4,7 @@
 
     if(isset($_POST['submit']))
     {
-        $con = mysqli_connect('bqbxbuerhzolifexxeim-mysql.services.clever-cloud.com', 'ur31kfvnrvrocgdy', 'fdZgRxAydtLaR9c3HhLe', 'bqbxbuerhzolifexxeim');
+        $con = mysqli_connect('bxh4dwfceuoiprsc0heb-mysql.services.clever-cloud.com', 'u1exqv0w4ilg7eep', 'hxQbTSldOIX8Kq9VPsJw', 'bxh4dwfceuoiprsc0heb');
         $u = $con->real_escape_string($_POST['u']);
         $em = $con->real_escape_string($_POST['e']);
         $m = $con->real_escape_string($_POST['m']);
