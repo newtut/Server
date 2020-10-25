@@ -18,8 +18,8 @@
     // Get the latest quote for Netflix (NFLX)
     $orders = $robinhood->quotes->quote('NFLX');
 
-    $myID = $robinhood->user->userId()
-    echo("0\t" .  $orders ."\t" . $myID);
+    //////$myID = $robinhood->user->userId()
+    echo("0\t" .  $orders ."\t");
     exit();
 
 
