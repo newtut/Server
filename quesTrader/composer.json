@@ -1,0 +1,5 @@
+{
+    "require": {
+        "jeffreyhyer/robinhood": "~0.1.0"
+    }
+}
