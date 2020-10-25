@@ -5,21 +5,22 @@
     // Authenticate with Username/Password
     //$username = "Username_123";
     //$password = "Password_456";
-    $username = mysqli_real_escape_string($con,$_POST["name"]);//$_POST["name"];
-    $usernameclean = filter_var($username, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH);
+    //$username = mysqli_real_escape_string($con,$_POST["name"]);//$_POST["name"];
+    $username = $_POST["name"];
+    $usernameclean = filter_var($username, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH) or die("Failed to clean name");
     $password = $_POST["password"];
     $account = "RobinhoodAccount#";
     $token = "RobinhoodAuthToken";
 
-    $robinhood = new Robinhood\Robinhood($usernameclean, $password);
+    $robinhood = new Robinhood\Robinhood($usernameclean, $password) or die("ROBINHOOD QUERY FAILED!");
     // OR
     //$robinhood = new Robinhood\Robinhood(null, null, $account, $token);
 
     // Get the latest quote for Netflix (NFLX)
-    $orders = $robinhood->quotes->quote('NFLX');
+    $orders = $robinhood->quotes->quote('NFLX') or die("NETFLIX QUERY FAILED");
 
     //////$myID = $robinhood->user->userId()
-    echo("0\t" .  $orders ."\t");
+    echo("0\t" .  $orders);
     exit();
 
 
