@@ -6,6 +6,7 @@
     //$username = "Username_123";
     //$password = "Password_456";
     //$username = mysqli_real_escape_string($con,$_POST["name"]);//$_POST["name"];
+    echo "Herejid";
     $username = $_POST["name"];
     $usernameclean = filter_var($username, FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_LOW | FILTER_FLAG_STRIP_HIGH) or die("Failed to clean name");
     $password = $_POST["password"];
@@ -20,7 +21,7 @@
     $orders = $robinhood->quotes->quote('NFLX') or die("NETFLIX QUERY FAILED");
 
     //////$myID = $robinhood->user->userId()
-    echo("0\t" .  "HERE");
+    echo "0\t" .  "HERE";
     exit();
 
 
