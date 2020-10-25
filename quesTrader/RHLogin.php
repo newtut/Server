@@ -20,7 +20,7 @@
     $orders = $robinhood->quotes->quote('NFLX') or die("NETFLIX QUERY FAILED");
 
     //////$myID = $robinhood->user->userId()
-    echo("0\t" .  $orders);
+    echo("0\t" .  "HERE");
     exit();
 
 
